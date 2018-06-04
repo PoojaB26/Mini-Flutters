@@ -132,19 +132,19 @@ class ChatMessage extends StatelessWidget{
                     margin: const EdgeInsets.only(right: 16.0),
                     child: new CircleAvatar(child: new Text(_name[0]))
                 ),
-                new Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    new Text(_name,
-                      style: Theme.of(context).textTheme.subhead,
-                    ),
-                    new Container(
-                      margin: const EdgeInsets.only(top: 5.0),
-                      child: new Text(text),
-                    ),
-
-
-                  ],
+                new Expanded(
+                  child: new Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      new Text(_name,
+                        style: Theme.of(context).textTheme.subhead,
+                      ),
+                      new Container(
+                        margin: const EdgeInsets.only(top: 5.0),
+                        child: new Text(text),
+                      ),
+                    ],
+                  ),
                 )
               ],
             )
@@ -155,3 +155,13 @@ class ChatMessage extends StatelessWidget{
 
 }
 
+final ThemeData kIOSTheme = new ThemeData(
+  primarySwatch: Colors.orange,
+  primaryColor: Colors.grey[100],
+  primaryColorBrightness: Brightness.light,
+);
+
+final ThemeData kDefaultTheme = new ThemeData(
+  primarySwatch: Colors.purple,
+  accentColor: Colors.orangeAccent[400],
+);
