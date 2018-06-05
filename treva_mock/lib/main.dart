@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:treva_mock/ui/home/HomePage.dart';
-import 'package:treva_mock/ui/home/HomePageBody.dart';
 
 
 void main() {
