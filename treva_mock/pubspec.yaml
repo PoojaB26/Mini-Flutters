@@ -26,6 +26,13 @@ flutter:
   uses-material-design: true
   assets:
       - assets/mars.png
+  fonts:
+      - family: Poppins
+        fonts:
+          - asset: assets/fonts/Poppins-SemiBold.ttf
+            weight: 600
+          - asset: assets/fonts/Poppins-Regular.ttf
+            weight: 400
 
   # To add assets to your application, add an assets section, like this:
   # assets:
