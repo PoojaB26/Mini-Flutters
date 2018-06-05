@@ -11,7 +11,9 @@ class HomePage extends StatelessWidget {
       body: new Column(
         children: <Widget>[
           new AppBarBody(),
-          new HomePageBody()
+          new HomePageBody(),
+          new HomePageBody(),
+          new HomePageBody(),
         ],
       )
     );
