@@ -5,6 +5,13 @@ import 'package:treva_mock/model/Planet.dart';
 class HomePageBody extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return new PlanetRow(planets[0]);
-  }
+    return new Expanded(
+      child: new ListView.builder(
+        itemBuilder: (context, index) => new PlanetRow(planets[index]),
+        itemCount: planets.length,
+        itemExtent: 152.0,
+      ),
+    );
+
 }
+  }

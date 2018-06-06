@@ -12,8 +12,6 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           new AppBarBody(),
           new HomePageBody(),
-          new HomePageBody(),
-          new HomePageBody(),
         ],
       )
     );
