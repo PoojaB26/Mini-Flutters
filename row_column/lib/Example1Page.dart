@@ -30,7 +30,16 @@ class Example1Page extends StatelessWidget {
       ),
       body: new Padding(
           padding: new EdgeInsets.symmetric(
-              vertical: 0.0, horizontal: 0.0)
+              vertical: 0.0, horizontal: 0.0),
+        child: new Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch ,
+          children: <Widget>[
+            subtitle,
+            middleSection,
+            bottomSection
+          ],
+        ),
       ),
     );
 
@@ -53,15 +62,35 @@ class Example1Page extends StatelessWidget {
   }
 
   Widget subtitle = new Container(
-
+    padding: new EdgeInsets.all(8.0),
+    color: new Color(0X33000000),
+    child: new Text('Subtitle'),
   );
 
-  Widget middleSection = new Container(
+  Widget middleSection = new Expanded(
+    child: new Container(
+      padding: new EdgeInsets.all(8.0),
+      color: new Color(0X9900CC00),
+      child: new Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          new Text('Some data here'),
+          new Text('More stuff here'),
+        ],
+      ),
 
+    ),
   );
 
   Widget bottomSection = new Container(
-
+    padding: new EdgeInsets.all(8.0),
+    color: new Color(0X99CC0000),
+    height: 48.0,
+    child: new Center(
+      child: new MaterialButton(
+        onPressed: null,
+        child: new Text("Hi"),),
+    ),
 
   );
 }
