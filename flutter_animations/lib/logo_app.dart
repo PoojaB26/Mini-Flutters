@@ -26,11 +26,8 @@ class _LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
     animationController = new AnimationController(vsync: this,
         duration: const Duration(milliseconds: 200)
     );
-    final CurvedAnimation curve =
-    new CurvedAnimation(parent: animationController, curve: Curves.easeIn);
-    animation = new Tween(begin: 0.0, end: 300.0).animate(curve);
+    animation = new CurvedAnimation(parent: animationController, curve: Curves.easeIn);
     //..addStatusListener((state) => print("$state"));
-    
     animation.addStatusListener((state){
       if(state == AnimationStatus.completed){
         animationController.reverse();
@@ -47,8 +44,8 @@ class _LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
 
   Widget build(BuildContext context) {
     return
-      //new AnimatedLogo(animation: animation);
-      new GrowTransition(child: new LogoWidget(), animation: animation,);
+      new AnimatedLogo(animation: animation);
+      //new GrowTransition(child: new LogoWidget(), animation: animation,);
   }
 
   dispose(){
