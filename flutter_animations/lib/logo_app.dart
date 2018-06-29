@@ -17,12 +17,25 @@ class _LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
     );
 
     animation = new Tween(begin: 0.0, end: 300.0).animate(animationController);
+    //..addStatusListener((state) => print("$state"));
+    
+    animation.addStatusListener((state){
+      if(state == AnimationStatus.completed){
+        animationController.reverse();
+      }else if (state == AnimationStatus.dismissed){
+        animationController.forward();
+      }
+    });
+
+    
+    
     animationController.forward();
   }
 
 
   Widget build(BuildContext context) {
-    return new AnimatedLogo(animation: animation);
+    return
+      new AnimatedLogo(animation: animation);
   }
 
   dispose(){
