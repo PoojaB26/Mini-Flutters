@@ -29,6 +29,28 @@ class PhotoHero extends StatelessWidget {
   }
 }
 
+class SecondScreen extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        // Set background to blue to emphasize that it's a new route.
+        color: Colors.white,
+        padding: const EdgeInsets.all(16.0),
+        alignment: Alignment.topLeft,
+        child: PhotoHero(
+          photo: 'https://pbs.twimg.com/profile_images/972154872261853184/RnOg6UyU_400x400.jpg',
+          width: 100.0,
+          onTap: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
+    );
+  }
+
+}
+
 class HeroAnimation extends StatelessWidget {
   Widget build(BuildContext context) {
     timeDilation = 10.0; // 1.0 means normal animation speed.
@@ -40,25 +62,7 @@ class HeroAnimation extends StatelessWidget {
           photo: 'https://pbs.twimg.com/profile_images/972154872261853184/RnOg6UyU_400x400.jpg',
           width: 300.0,
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute<Null>(
-                builder: (BuildContext context) {
-                  return Scaffold(
-                    body: Container(
-                      // Set background to blue to emphasize that it's a new route.
-                      color: Colors.white,
-                      padding: const EdgeInsets.all(16.0),
-                      alignment: Alignment.topLeft,
-                      child: PhotoHero(
-                        photo: 'https://pbs.twimg.com/profile_images/972154872261853184/RnOg6UyU_400x400.jpg',
-                        width: 100.0,
-                        onTap: () {
-                          Navigator.of(context).pop();
-                        },
-                      ),
-                    ),
-                  );
-                }
-            ));
+            Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new SecondScreen()));
           },
         ),
       ),
