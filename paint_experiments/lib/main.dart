@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paint_experiments/home_content.dart';
-
+import 'package:paint_experiments/tic_tac_toe.dart';
 
 
 void main() => runApp(new MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeContent(),
+      home: TicTacToe(),
     );
   }
 }
