@@ -1,5 +1,6 @@
 package com.poojab26.nativechannels;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import io.flutter.plugin.common.MethodChannel;
  * Created by poojab26 on 24-Jul-18.
  */
 public class TestActivity extends FlutterActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );

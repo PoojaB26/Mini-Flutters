@@ -37,6 +37,13 @@ public class MainActivity extends FlutterActivity {
                 if (call.method.equals("showNativeView")){
                     Intent intent = new Intent ( MainActivity.this , com.poojab26.nativechannels.TestActivity.class );
                     startActivity ( intent );
+
+                    CameraFragment cameraFragment = new CameraFragment();
+                    getSupportFragmentManager().beginTransaction()
+                            .add(R.id.activity_main, productListFragment)
+                            .commit();
+
+
                     String message ="Life Changed";
 
                     result.success(message);

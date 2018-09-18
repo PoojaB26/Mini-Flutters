@@ -11,7 +11,19 @@ class MovieDetailsPage extends StatelessWidget{
       body: new SingleChildScrollView(
         child: new Column(
           children: <Widget>[
-
+            new MovieDetailHeader(movie),
+            new Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: new Storyline(movie.storyline),
+            ),
+            new PhotoScroller(movie.photoUrls),
+            new Padding(
+              padding: const EdgeInsets.only(
+                top: 20.0,
+                bottom: 50.0,
+              ),
+              child: new ActorScroller(movie.actors),
+            ),
           ],
         ),
       ),

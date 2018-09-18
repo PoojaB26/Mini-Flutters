@@ -20,7 +20,7 @@ List<Planet> planets = [
     distance: "54.6m Km",
     gravity: "3.711 m/s ",
     description: "Lorem ipsum...",
-    image: "assets/mars.png",
+    image: "https://i.imgur.com/hzAOzv7.png",
   ),
   const Planet(
     id: "2",
